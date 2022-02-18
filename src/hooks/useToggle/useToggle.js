@@ -4,7 +4,7 @@ export const useToggle = (initialValue = false) => {
   const [state, setState] = useState(initialValue);
 
   const toggleState = (value) => {
-    setState((prev) => (value ? value : !prev));
+    setState((prev) => (typeof value === "boolean" ? value : !prev));
   };
 
   return [state, toggleState];
