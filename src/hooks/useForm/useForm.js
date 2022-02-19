@@ -1,21 +1,20 @@
-// import { useState } from "react";
+import { useState } from "react";
 
-// const useForm = (fields: object) => {
-//   const [form, setForm] = useState(fields);
+const useForm = () => {
+  const [form, setForm] = useState({});
 
-  
-//   const handleChange = (e: Event) => {
-//     setForm({
-//       ...form,
-//       [e.target.name]: e.target.value,
-//     })
-//   }
-  
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//   }
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-//   return [form, handleChange, handleSubmit];
-// };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
-// export default useForm;
+  return [form, handleChange, handleSubmit];
+};
+
+export default useForm;
