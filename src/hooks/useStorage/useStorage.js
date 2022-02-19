@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-const useStorage = (key, defaultValue, storage) => {
+export const useStorage = (key, defaultValue, storage) => {
   const [value, setValue] = useState(() => {
     const storedValue = storage.getItem(key);
 
