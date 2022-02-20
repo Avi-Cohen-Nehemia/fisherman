@@ -37,6 +37,7 @@
   "devDependencies": {
     "@testing-library/dom": "^8.11.3",
     "@testing-library/user-event": "^13.5.0",
-    "jest-watch-typeahead": "^0.6.5"
+    "jest-watch-typeahead": "^0.6.5",
+    "jest-environment-jsdom": "^27.5.1"
   }
 }
