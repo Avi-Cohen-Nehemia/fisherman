@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { useAsync } from "./index";
+import { useAsync } from "./useAsync";
 
 describe("useAsync", () => {
   const callback = (result = true) => {
@@ -50,12 +50,12 @@ describe("useAsync", () => {
     const loading = await screen.findByText('loading: false');
     const data = await screen.findByText('data: undefined');
     const error = await screen.findByText('error: error!');
-  
+
     expect(loading).toBeInTheDocument();
     expect(data).toBeInTheDocument();
     expect(error).toBeInTheDocument();
   });
-  
+
   it("sets loading to false once the the callback finished its process", async () => {
     render(<TestComponent />);
     const loading = await screen.findByText('loading: false');
