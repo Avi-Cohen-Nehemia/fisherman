@@ -7,7 +7,7 @@ describe("useEventListener", () => {
   const TestComponent = ({ event, callback, element }) => {
     const buttonRef = useRef();
     const el = element || buttonRef.current;
-    console.log(el);
+
     useEventListener(event, callback, el);
 
     return <button ref={buttonRef} />;
