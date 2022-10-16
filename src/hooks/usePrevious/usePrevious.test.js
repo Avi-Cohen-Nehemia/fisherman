@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { usePrevious } from './usePrevious';
-import { render, screen, userEvent } from '../../src/testUtils';
 
 const TestComponent = () => {
   const [count, setCount] = useState(0);
